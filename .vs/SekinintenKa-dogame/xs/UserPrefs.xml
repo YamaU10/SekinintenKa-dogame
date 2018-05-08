@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{0E9D5EC0-D18D-17AF-659C-45782BB3DF1B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Player1Controller.cs">
+    <Files>
+      <File FileName="Assets/Card.cs" Line="8" Column="22" />
+      <File FileName="Assets/CardManager.cs" Line="12" Column="20" />
+      <File FileName="Assets/CardText.cs" Line="51" Column="36" />
+      <File FileName="Assets/FalseOrTrue.cs" Line="5" Column="14" />
+      <File FileName="Assets/Player1Controller.cs" Line="17" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.SekinintenKa-dogame PreferredExecutionTarget="Unity.Editor" />
+</Properties>
