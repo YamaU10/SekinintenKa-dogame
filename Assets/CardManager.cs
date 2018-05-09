@@ -14,7 +14,7 @@ public class CardManager : MonoBehaviour
     //GameObject CardObj;
     public Canvas Canvas;
     //public RectTransform TrueCardObj, CardObj;
-    bool Ins;
+	public bool Ins;
 	GameObject CardObjRes;
 	GameObject CardObj;
 	GameObject p1Folder, p2Folder, p3Folder, p4Folder;
