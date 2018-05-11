@@ -9,6 +9,7 @@ TagManager:
   - 2PCARDObj
   - 4PCARDObj
   - 3PCARDObj
+  - Player2CardPos
   layers:
   - Default
   - TransparentFX
