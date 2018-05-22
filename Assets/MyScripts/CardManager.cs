@@ -108,13 +108,11 @@ public class CardManager : MonoBehaviour
 
 		for (int i = 0; i < CardListCount; i++)
 		{
-			//CardObj = Instantiate(Resources.Load("Card") as GameObject, transform.position, Quaternion.identity);
+			
 			CardObj = Instantiate(CardObjRes, transform.position, Quaternion.identity);
 			CardObj.name = "Card" + i;
 			CardObj.transform.parent = Canvas.transform;
 			CardObj.transform.localScale = CardObjRes.transform.localScale;
-			//CardObj.GetComponent<RectTransform>().offsetMin= new Vector2(374.7f, 19.25f);
-			//CardObj.GetComponent<RectTransform>().offsetMax = new Vector2(374.7f, 345.25f);
 			CardObj.transform.position = CardObjRes.transform.position;
 			CardObj.GetComponent<CardText>().count = i;
 		}

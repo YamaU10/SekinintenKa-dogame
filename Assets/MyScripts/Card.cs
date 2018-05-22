@@ -10,5 +10,6 @@ public class Card
     public string Naiyou;
     public string Mark;
     public string FileName;
+	public bool Set;
 
 }

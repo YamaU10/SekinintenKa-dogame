@@ -113,6 +113,7 @@
     <Compile Include="Assets\MyScripts\ListExtension.cs" />
     <Compile Include="Assets\MyScripts\Player1Controller.cs" />
     <Compile Include="Assets\MyScripts\Player2Controller.cs" />
+    <Compile Include="Assets\MyScripts\Player3Controller.cs" />
     <Compile Include="Assets\MyScripts\PlayerPrefsUtility.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

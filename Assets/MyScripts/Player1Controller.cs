@@ -9,8 +9,9 @@ public class Player1Controller : MonoBehaviour
 	public GameObject[] MyCards;
 	public GameObject[] p1CardPos;
 	//float timer;
-	bool end;
+	bool end, Set1, Set2;
 	public int Count = 0;
+	int CountSet1, CountSet2;
 	CardManager CManager;
 
 
@@ -23,7 +24,6 @@ public class Player1Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-
 		MyCards = GameObject.FindGameObjectsWithTag("1PCARDObj");
 
 		//inputHorizontal = Input.GetAxis("Horizontal");
@@ -32,10 +32,9 @@ public class Player1Controller : MonoBehaviour
 		if (CManager.Ins == true)
 		{
 
-			if (Input.GetButtonDown("Horizontal"))
+			if (Input.GetKeyDown(KeyCode.D))
 			{
-
-
+               
 				if (Count < 13)
 				{
 					Count += 1;
@@ -44,24 +43,49 @@ public class Player1Controller : MonoBehaviour
 				{
 					Count = 0;
 				}
-
-
+                
 			}
+			if (Input.GetKeyDown(KeyCode.A))
+            {
+                
+                if (Count > -1)
+                {
+                    Count -= 1;
+                }
+                if (Count == -1)
+                {
+                    Count = 12;
+                }
+
+            }
 
 			switch (Count)
 			{
 				case 0:
-					MyCards[0].transform.position = new Vector3(MyCards[0].transform.position.x, 75, MyCards[0].transform.position.z);
-					MyCards[0].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);
+					MyCards[Count].transform.position = new Vector3(MyCards[0].transform.position.x, 75, MyCards[0].transform.position.z);
+					MyCards[Count].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);
 
 					MyCards[12].transform.position = p1CardPos[12].transform.position;
 					MyCards[12].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+					MyCards[Count + 1].transform.position = p1CardPos[Count + 1].transform.position;
+                    MyCards[Count + 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+
+					if(Input.GetKeyDown(KeyCode.KeypadEnter))
+					{
+						if (Set1 == true && Set2 == false) CountSet2 = CManager.CardList[MyCards[Count].GetComponent<CardText>().count].CardNumber;
+
+						if(Set1 == false)CountSet1 = CManager.CardList[MyCards[Count].GetComponent<CardText>().count].CardNumber;
+
+						Set1 = true;
+					}
 
 					break;
 
 				case 1:
 					MyCards[Count - 1].transform.position = p1CardPos[Count - 1].transform.position;
 					MyCards[Count - 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+					MyCards[Count + 1].transform.position = p1CardPos[Count + 1].transform.position;
+                    MyCards[Count + 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
 
 					MyCards[Count].transform.position = new Vector3(MyCards[Count].transform.position.x, 75, MyCards[Count].transform.position.z);
 					MyCards[Count].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);
@@ -70,6 +94,8 @@ public class Player1Controller : MonoBehaviour
 				case 2:
 					MyCards[Count - 1].transform.position = p1CardPos[Count - 1].transform.position;
 					MyCards[Count - 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+					MyCards[Count + 1].transform.position = p1CardPos[Count + 1].transform.position;
+                    MyCards[Count + 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
 
 					MyCards[Count].transform.position = new Vector3(MyCards[Count].transform.position.x, 75, MyCards[Count].transform.position.z);
 					MyCards[Count].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);
@@ -78,6 +104,8 @@ public class Player1Controller : MonoBehaviour
 				case 3:
 					MyCards[Count - 1].transform.position = p1CardPos[Count - 1].transform.position;
 					MyCards[Count - 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+					MyCards[Count + 1].transform.position = p1CardPos[Count + 1].transform.position;
+                    MyCards[Count + 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
 
 					MyCards[Count].transform.position = new Vector3(MyCards[Count].transform.position.x, 75, MyCards[Count].transform.position.z);
 					MyCards[Count].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);
@@ -86,6 +114,8 @@ public class Player1Controller : MonoBehaviour
 				case 4:
 					MyCards[Count - 1].transform.position = p1CardPos[Count - 1].transform.position;
 					MyCards[Count - 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+					MyCards[Count + 1].transform.position = p1CardPos[Count + 1].transform.position;
+                    MyCards[Count + 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
 
 					MyCards[Count].transform.position = new Vector3(MyCards[Count].transform.position.x, 75, MyCards[Count].transform.position.z);
 					MyCards[Count].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);
@@ -95,6 +125,8 @@ public class Player1Controller : MonoBehaviour
 				case 5:
 					MyCards[Count - 1].transform.position = p1CardPos[Count - 1].transform.position;
 					MyCards[Count - 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+					MyCards[Count + 1].transform.position = p1CardPos[Count + 1].transform.position;
+                    MyCards[Count + 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
 
 					MyCards[Count].transform.position = new Vector3(MyCards[Count].transform.position.x, 75, MyCards[Count].transform.position.z);
 					MyCards[Count].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);
@@ -103,6 +135,8 @@ public class Player1Controller : MonoBehaviour
 				case 6:
 					MyCards[Count - 1].transform.position = p1CardPos[Count - 1].transform.position;
 					MyCards[Count - 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+					MyCards[Count + 1].transform.position = p1CardPos[Count + 1].transform.position;
+                    MyCards[Count + 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
 
 					MyCards[Count].transform.position = new Vector3(MyCards[Count].transform.position.x, 75, MyCards[Count].transform.position.z);
 					MyCards[Count].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);
@@ -111,6 +145,8 @@ public class Player1Controller : MonoBehaviour
 				case 7:
 					MyCards[Count - 1].transform.position = p1CardPos[Count - 1].transform.position;
 					MyCards[Count - 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+					MyCards[Count + 1].transform.position = p1CardPos[Count + 1].transform.position;
+                    MyCards[Count + 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
 
 					MyCards[Count].transform.position = new Vector3(MyCards[Count].transform.position.x, 75, MyCards[Count].transform.position.z);
 					MyCards[Count].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);
@@ -119,6 +155,8 @@ public class Player1Controller : MonoBehaviour
 				case 8:
 					MyCards[Count - 1].transform.position = p1CardPos[Count - 1].transform.position;
 					MyCards[Count - 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+					MyCards[Count + 1].transform.position = p1CardPos[Count + 1].transform.position;
+                    MyCards[Count + 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
 
 					MyCards[Count].transform.position = new Vector3(MyCards[Count].transform.position.x, 75, MyCards[Count].transform.position.z);
 					MyCards[Count].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);
@@ -127,6 +165,8 @@ public class Player1Controller : MonoBehaviour
 				case 9:
 					MyCards[Count - 1].transform.position = p1CardPos[Count - 1].transform.position;
 					MyCards[Count - 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+					MyCards[Count + 1].transform.position = p1CardPos[Count + 1].transform.position;
+                    MyCards[Count + 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
 
 					MyCards[Count].transform.position = new Vector3(MyCards[Count].transform.position.x, 75, MyCards[Count].transform.position.z);
 					MyCards[Count].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);
@@ -135,6 +175,8 @@ public class Player1Controller : MonoBehaviour
 				case 10:
 					MyCards[Count - 1].transform.position = p1CardPos[Count - 1].transform.position;
 					MyCards[Count - 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+					MyCards[Count + 1].transform.position = p1CardPos[Count + 1].transform.position;
+                    MyCards[Count + 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
 
 					MyCards[Count].transform.position = new Vector3(MyCards[Count].transform.position.x, 75, MyCards[Count].transform.position.z);
 					MyCards[Count].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);
@@ -143,6 +185,8 @@ public class Player1Controller : MonoBehaviour
 				case 11:
 					MyCards[Count - 1].transform.position = p1CardPos[Count - 1].transform.position;
 					MyCards[Count - 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
+					MyCards[Count + 1].transform.position = p1CardPos[Count + 1].transform.position;
+                    MyCards[Count + 1].transform.localScale = new Vector3(1.2f, 1.3f, 1.1f);
 
 					MyCards[Count].transform.position = new Vector3(MyCards[Count].transform.position.x, 75, MyCards[Count].transform.position.z);
 					MyCards[Count].transform.localScale = new Vector3(1.3f, 1.4f, 1.1f);

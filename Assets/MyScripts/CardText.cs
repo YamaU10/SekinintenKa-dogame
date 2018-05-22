@@ -8,7 +8,9 @@ public class CardText : MonoBehaviour
 
 	CardManager CManager;
 	public Text Naiyou, Number1, Number2;
+	public GameObject CardImage;
 	public int count;
+	public Sprite CardSprite;
 
 	// Use this for initialization
 	void Start()
@@ -45,14 +47,26 @@ public class CardText : MonoBehaviour
 		if (this.gameObject.transform.parent.name == "2PCARD")
 		{
 			this.gameObject.tag = "2PCARDObj";
+			CardImage.GetComponent<Image>().sprite = CardSprite;
+			Naiyou.text = "";
+			Number1.text = "";
+			Number2.text = "";
 		}
 		if (this.gameObject.transform.parent.name == "3PCARD")
 		{
 			this.gameObject.tag = "3PCARDObj";
+			CardImage.GetComponent<Image>().sprite = CardSprite;
+			Naiyou.text = "";
+            Number1.text = "";
+            Number2.text = "";
 		}
 		if (this.gameObject.transform.parent.name == "4PCARD")
 		{
 			this.gameObject.tag = "4PCARDObj";
+			CardImage.GetComponent<Image>().sprite = CardSprite;
+			Naiyou.text = "";
+            Number1.text = "";
+            Number2.text = "";
 		}
 
 	}
