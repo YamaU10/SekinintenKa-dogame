@@ -18,6 +18,7 @@ public class CardManager : MonoBehaviour
 	GameObject CardObjRes;
 	GameObject CardObj;
 	GameObject p1Folder, p2Folder, p3Folder, p4Folder;
+	public int P1CardCount = 13, P2CardCount = 13, P3CardCount = 13, P4CardCount = 13;
 
 	int[] CardBox = new int[52];
 
