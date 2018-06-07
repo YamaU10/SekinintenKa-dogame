@@ -10,6 +10,9 @@ TagManager:
   - 4PCARDObj
   - 3PCARDObj
   - Player2CardPos
+  - P2CloneCard
+  - P3CloneCard
+  - P4CloneCard
   layers:
   - Default
   - TransparentFX

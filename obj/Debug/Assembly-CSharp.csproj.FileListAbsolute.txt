@@ -1,0 +1,2 @@
+/Users/Yamamu/Desktop/Unityproject/SekinintenKa-dogame/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache
+/Users/Yamamu/Desktop/Unityproject/SekinintenKa-dogame/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache

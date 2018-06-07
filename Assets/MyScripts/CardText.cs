@@ -47,7 +47,7 @@ public class CardText : MonoBehaviour
 		if (this.gameObject.transform.parent.name == "2PCARD")
 		{
 			this.gameObject.tag = "2PCARDObj";
-			CardImage.GetComponent<Image>().sprite = CardSprite;
+            CardImage.GetComponent<Image>().enabled = false;
 			Naiyou.text = "";
 			Number1.text = "";
 			Number2.text = "";
@@ -55,7 +55,7 @@ public class CardText : MonoBehaviour
 		if (this.gameObject.transform.parent.name == "3PCARD")
 		{
 			this.gameObject.tag = "3PCARDObj";
-			CardImage.GetComponent<Image>().sprite = CardSprite;
+            CardImage.GetComponent<Image>().enabled = false;
 			Naiyou.text = "";
             Number1.text = "";
             Number2.text = "";
@@ -63,12 +63,11 @@ public class CardText : MonoBehaviour
 		if (this.gameObject.transform.parent.name == "4PCARD")
 		{
 			this.gameObject.tag = "4PCARDObj";
-			CardImage.GetComponent<Image>().sprite = CardSprite;
+            CardImage.GetComponent<Image>().enabled = false;
 			Naiyou.text = "";
             Number1.text = "";
             Number2.text = "";
 		}
-
 	}
 
 }
